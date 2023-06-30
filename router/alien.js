@@ -15,11 +15,11 @@ const feed = require('../model/feedback')
      res.send('ERROR'+err)
  }
 })
-router.get('/',async(req,res)=>
+router.get('/get',async(req,res)=>
 {
   try{
-       const alien = await Alien.find()
-       res.json(alien)
+       const cart = await carts.find()
+       res.json(cart)
  }
  catch(err){
      res.send('ERROR'+err)
